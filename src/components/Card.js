@@ -10,7 +10,7 @@ export function Card(card_data) {
             <p className='text-sm'>{symbol}</p>
         </div>
         <div className='flex'>
-            <p className='text-lg font-bold'>{`${parseFloat(priceUsd).toFixed(2)}`}</p>
+            <p className='text-lg font-bold'>{`$${parseFloat(priceUsd).toFixed(2)}`}</p>
         </div>
         <div className='flex'>
             <a className='text-sm' href={explorer}>Explorer &rarr;</a>

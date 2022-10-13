@@ -8,12 +8,12 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('https://api.coincap.io/v2/assets/?limit=10');
+    const fetchData = async (limit) => {
+      const response = await fetch(`https://api.coincap.io/v2/assets/?limit=${limit}`);
       const values = await response.json();
       setData(values.data);
     };
-    fetchData();
+    fetchData(30);
   }, []);
  
   console.log(data);
